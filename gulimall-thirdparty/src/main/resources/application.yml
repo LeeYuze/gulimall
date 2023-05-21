@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: gulimall-thirdparty
+  cloud:
+    nacos:
+      config:
+        server-addr: 10.211.55.8:8848
+        namespace: df229fce-7f17-4223-a7c1-2e4bbe7e1b1b
+  config:
+    import:
+      - optional:nacos:oss.yml?group=DEVELOP_GROUP
+      - nacos:other.yml?group=DEVELOP_GROUP

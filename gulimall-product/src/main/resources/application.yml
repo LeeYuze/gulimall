@@ -1,14 +1,13 @@
 spring:
-  datasource:
-    username: root
-    password: root
-    url: jdbc:mysql://linux01:3306/gulimall_pms?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
-    driver-class-name: com.mysql.cj.jdbc.Driver
-
-mybatis-plus:
-  global-config:
-    db-config:
-      id-type: auto
-
-server:
-  port: 11000
+  application:
+    name: gulimall-product
+  cloud:
+    nacos:
+      config:
+        server-addr: 10.211.55.8:8848
+        namespace: eef8cd02-58de-4978-84fa-2de528bab43f
+  config:
+    import:
+      - optional:nacos:datasource.yml?group=DEVELOP_GROUP
+      - optional:nacos:mybatis-plus.yml?group=DEVELOP_GROUP
+      - nacos:other.yml?group=DEVELOP_GROUP

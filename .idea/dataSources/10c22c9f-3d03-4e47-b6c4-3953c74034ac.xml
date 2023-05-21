@@ -2392,7 +2392,7 @@ NEXT_FIRE_TIME</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="554" parent="320" name="menu_id">
-      <AutoIncrement>31</AutoIncrement>
+      <AutoIncrement>76</AutoIncrement>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -3610,7 +3610,7 @@ NEXT_FIRE_TIME</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="792" parent="340" name="cat_id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>1433</AutoIncrement>
       <Comment>分类id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>

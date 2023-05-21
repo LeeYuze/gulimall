@@ -3,6 +3,7 @@ package com.atguigu.gulimall.product.dao;
 import com.atguigu.gulimall.product.entity.CategoryBrandRelationEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * 品牌分类关联
@@ -13,5 +14,11 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface CategoryBrandRelationDao extends BaseMapper<CategoryBrandRelationEntity> {
-	
+
+    /**
+     * 修改三级分类名称，根据三级分类id
+     * @param catId 分类id
+     * @param name 分类名称
+     */
+    void updateCategoryNameById(@Param("catId") Long catId, @Param("name") String name);
 }
