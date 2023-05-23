@@ -1,7 +1,13 @@
 package com.atguigu.gulimall.product.service.impl;
 
+import com.atguigu.gulimall.product.vo.Attr;
+import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
+
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -24,6 +30,17 @@ public class SkuSaleAttrValueServiceImpl extends ServiceImpl<SkuSaleAttrValueDao
         );
 
         return new PageUtils(page);
+    }
+
+    @Override
+    public void saveBySkuId(Long skuId, List<Attr> attr) {
+        List<SkuSaleAttrValueEntity> skuSaleAttrValueEntityList = attr.stream().map(saleAttr -> {
+            SkuSaleAttrValueEntity skuSaleAttrValueEntity = new SkuSaleAttrValueEntity();
+            BeanUtils.copyProperties(saleAttr, skuSaleAttrValueEntity);
+            skuSaleAttrValueEntity.setAttrId(skuId);
+            return skuSaleAttrValueEntity;
+        }).collect(Collectors.toList());
+        this.saveBatch(skuSaleAttrValueEntityList);
     }
 
 }

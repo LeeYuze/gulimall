@@ -38,7 +38,7 @@ public class OssController {
         String host = "https://" + bucket + "." + endpoint;
         // 设置上传到OSS文件的前缀，可置空此项。置空后，文件将上传至Bucket的根目录下。
         String format = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
-        String dir = format;
+        String dir = format + "/";
 
         // 创建ossClient实例。
         OSS ossClient = new OSSClientBuilder().build(endpoint, accessId, accessKey);

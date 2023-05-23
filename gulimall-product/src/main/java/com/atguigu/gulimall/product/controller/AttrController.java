@@ -1,17 +1,17 @@
 package com.atguigu.gulimall.product.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 //import org.apache.shiro.authz.annotation.RequiresPermissions;
+import com.atguigu.gulimall.product.entity.ProductAttrValueEntity;
+import com.atguigu.gulimall.product.service.ProductAttrValueService;
 import com.atguigu.gulimall.product.vo.AttrRespVo;
 import com.atguigu.gulimall.product.vo.AttrVo;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.atguigu.gulimall.product.entity.AttrEntity;
 import com.atguigu.gulimall.product.service.AttrService;
@@ -28,9 +28,25 @@ import com.atguigu.common.utils.R;
  */
 @RestController
 @RequestMapping("product/attr")
+@RequiredArgsConstructor
 public class AttrController {
-    @Autowired
-    private AttrService attrService;
+    private final AttrService attrService;
+
+    private final ProductAttrValueService productAttrValueService;
+
+    @PostMapping("/update/{spuId}")
+    public R updateSpuAttr(@PathVariable Long spuId, @RequestBody List<ProductAttrValueEntity> productAttrValueEntityList) {
+        productAttrValueService.updateBatchBySpuAttr(spuId, productAttrValueEntityList);
+        return R.ok();
+    }
+
+    @GetMapping("/base/listforspu/{spuId}")
+    public R baseListForSpu(@PathVariable Long spuId) {
+
+        List<ProductAttrValueEntity> productAttrValueEntityList = productAttrValueService.listBySpuId(spuId);
+
+        return R.ok().put("data", productAttrValueEntityList);
+    }
 
     /**
      * 列表

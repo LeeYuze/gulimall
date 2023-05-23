@@ -2,25 +2,14 @@ package com.atguigu.gulimall.product.vo;
 
 import lombok.Data;
 
-/**
- * @author lihaohui
- * @date 2023/5/21
- */
 @Data
 public class AttrRespVo extends AttrVo {
     /**
-     * 三级分类名称
+     * 			"catelogName": "手机/数码/手机", //所属分类名字
+     * 			"groupName": "主体", //所属分组名字
      */
     private String catelogName;
-
-    /**
-     * 属性分组名称
-     */
     private String groupName;
 
-
-    /**
-     * 三级分类路径
-     */
     private Long[] catelogPath;
 }

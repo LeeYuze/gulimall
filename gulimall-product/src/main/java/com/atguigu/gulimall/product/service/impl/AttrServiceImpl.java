@@ -28,6 +28,7 @@ import com.atguigu.common.utils.Query;
 import com.atguigu.gulimall.product.dao.AttrDao;
 import com.atguigu.gulimall.product.entity.AttrEntity;
 import com.atguigu.gulimall.product.service.AttrService;
+import org.springframework.transaction.annotation.Transactional;
 
 
 @Service("attrService")
@@ -51,6 +52,7 @@ public class AttrServiceImpl extends ServiceImpl<AttrDao, AttrEntity> implements
     }
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public void saveAttr(AttrVo attr) {
         AttrEntity attrEntity = new AttrEntity();
         BeanUtils.copyProperties(attr, attrEntity);
@@ -64,12 +66,13 @@ public class AttrServiceImpl extends ServiceImpl<AttrDao, AttrEntity> implements
             attrAttrgroupRelationDao.insert(relationEntity);
         }
 
-
     }
 
     @Override
     public PageUtils queryPageByCategoryIdAndType(Map<String, Object> params, Long categoryId, String attrType) {
         QueryWrapper<AttrEntity> queryWrapper = new QueryWrapper<>();
+
+        queryWrapper.eq("attr_type", "base".equalsIgnoreCase(attrType) ? ProductConstant.AttrEnum.ATTR_TYPE_BASE.getCode() : ProductConstant.AttrEnum.ATTR_TYPE_SALE.getCode());
 
         if (!categoryId.equals(0L)) {
             queryWrapper.eq("catelog_id", categoryId);
@@ -77,9 +80,7 @@ public class AttrServiceImpl extends ServiceImpl<AttrDao, AttrEntity> implements
 
         String key = (String) params.get("key");
         if (!Objects.isNull(key)) {
-            queryWrapper.eq("attr_type", "base".equalsIgnoreCase(attrType) ? ProductConstant.AttrEnum.ATTR_TYPE_BASE.getCode() : ProductConstant.AttrEnum.ATTR_TYPE_SALE.getCode()).and(obj -> {
-                obj.eq("attr_id", key).or().like("attr_name", key);
-            });
+            queryWrapper.and(obj -> obj.eq("attr_id", key).or().like("attr_name", key));
         }
 
         IPage<AttrEntity> page = this.page(
@@ -137,6 +138,7 @@ public class AttrServiceImpl extends ServiceImpl<AttrDao, AttrEntity> implements
     }
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public void updateById(AttrVo attrVo) {
         AttrEntity attrEntity = new AttrEntity();
         BeanUtils.copyProperties(attrVo, attrEntity);
@@ -186,15 +188,15 @@ public class AttrServiceImpl extends ServiceImpl<AttrDao, AttrEntity> implements
         // 该分组下所有已关联属性id
         List<Long> attrIds = relationEntities.stream().map(AttrAttrgroupRelationEntity::getAttrId).collect(Collectors.toList());
 
-        QueryWrapper<AttrEntity> queryWrapper = new QueryWrapper<AttrEntity>().eq("catelog_id", catelogId).eq("attr_type",ProductConstant.AttrEnum.ATTR_TYPE_BASE.getCode());
+        QueryWrapper<AttrEntity> queryWrapper = new QueryWrapper<AttrEntity>().eq("catelog_id", catelogId).eq("attr_type", ProductConstant.AttrEnum.ATTR_TYPE_BASE.getCode());
 
-        if(attrIds.size() > 0) {
+        if (attrIds.size() > 0) {
             queryWrapper.notIn("attr_id", attrIds);
         }
 
         String key = (String) params.get("key");
-        if(!Objects.isNull(key)) {
-            queryWrapper.and(w->{
+        if (!Objects.isNull(key)) {
+            queryWrapper.and(w -> {
                 w.eq("attr_id", key).or().like("attr_name", key);
             });
         }

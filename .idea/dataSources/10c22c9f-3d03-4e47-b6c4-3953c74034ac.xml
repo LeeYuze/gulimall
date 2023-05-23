@@ -2209,7 +2209,7 @@ NEXT_FIRE_TIME</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="519" parent="316" name="log_id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>62</AutoIncrement>
       <Comment>任务日志id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -2340,7 +2340,7 @@ NEXT_FIRE_TIME</ColNames>
       <UnderlyingIndexName>param_key</UnderlyingIndexName>
     </key>
     <column id="544" parent="319" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>5</AutoIncrement>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -3432,7 +3432,7 @@ NEXT_FIRE_TIME</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="758" parent="336" name="attr_id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>17</AutoIncrement>
       <Comment>属性id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -3448,2380 +3448,2385 @@ NEXT_FIRE_TIME</ColNames>
       <DataType>tinyint|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="761" parent="336" name="icon">
-      <Comment>属性图标</Comment>
-      <DataType>varchar(255)|0s</DataType>
+    <column id="761" parent="336" name="value_type">
+      <Comment>值类型[0-为单个值，1-可以选择多个值]</Comment>
+      <DataType>tinyint|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="762" parent="336" name="value_select">
-      <Comment>可选值列表[用逗号分隔]</Comment>
-      <DataType>char(255)|0s</DataType>
+    <column id="762" parent="336" name="icon">
+      <Comment>属性图标</Comment>
+      <DataType>varchar(255)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="763" parent="336" name="attr_type">
-      <Comment>属性类型[0-销售属性，1-基本属性，2-既是销售属性又是基本属性]</Comment>
-      <DataType>tinyint|0s</DataType>
+    <column id="763" parent="336" name="value_select">
+      <Comment>可选值列表[用逗号分隔]</Comment>
+      <DataType>char(255)|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="764" parent="336" name="enable">
-      <Comment>启用状态[0 - 禁用，1 - 启用]</Comment>
-      <DataType>bigint|0s</DataType>
+    <column id="764" parent="336" name="attr_type">
+      <Comment>属性类型[0-销售属性，1-基本属性，2-既是销售属性又是基本属性]</Comment>
+      <DataType>tinyint|0s</DataType>
       <Position>7</Position>
     </column>
-    <column id="765" parent="336" name="catelog_id">
-      <Comment>所属分类</Comment>
+    <column id="765" parent="336" name="enable">
+      <Comment>启用状态[0 - 禁用，1 - 启用]</Comment>
       <DataType>bigint|0s</DataType>
       <Position>8</Position>
     </column>
-    <column id="766" parent="336" name="show_desc">
-      <Comment>快速展示【是否展示在介绍上；0-否 1-是】，在sku中仍然可以调整</Comment>
-      <DataType>tinyint|0s</DataType>
+    <column id="766" parent="336" name="catelog_id">
+      <Comment>所属分类</Comment>
+      <DataType>bigint|0s</DataType>
       <Position>9</Position>
     </column>
-    <index id="767" parent="336" name="PRIMARY">
+    <column id="767" parent="336" name="show_desc">
+      <Comment>快速展示【是否展示在介绍上；0-否 1-是】，在sku中仍然可以调整</Comment>
+      <DataType>tinyint|0s</DataType>
+      <Position>10</Position>
+    </column>
+    <index id="768" parent="336" name="PRIMARY">
       <ColNames>attr_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="768" parent="336" name="PRIMARY">
+    <key id="769" parent="336" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="769" parent="337" name="id">
-      <AutoIncrement>1</AutoIncrement>
+    <column id="770" parent="337" name="id">
+      <AutoIncrement>31</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="770" parent="337" name="attr_id">
+    <column id="771" parent="337" name="attr_id">
       <Comment>属性id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="771" parent="337" name="attr_group_id">
+    <column id="772" parent="337" name="attr_group_id">
       <Comment>属性分组id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="772" parent="337" name="attr_sort">
+    <column id="773" parent="337" name="attr_sort">
       <Comment>属性组内排序</Comment>
       <DataType>int|0s</DataType>
       <Position>4</Position>
     </column>
-    <index id="773" parent="337" name="PRIMARY">
+    <index id="774" parent="337" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="774" parent="337" name="PRIMARY">
+    <key id="775" parent="337" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="775" parent="338" name="attr_group_id">
-      <AutoIncrement>1</AutoIncrement>
+    <column id="776" parent="338" name="attr_group_id">
+      <AutoIncrement>8</AutoIncrement>
       <Comment>分组id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="776" parent="338" name="attr_group_name">
+    <column id="777" parent="338" name="attr_group_name">
       <Comment>组名</Comment>
       <DataType>char(20)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="777" parent="338" name="sort">
+    <column id="778" parent="338" name="sort">
       <Comment>排序</Comment>
       <DataType>int|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="778" parent="338" name="descript">
+    <column id="779" parent="338" name="descript">
       <Comment>描述</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="779" parent="338" name="icon">
+    <column id="780" parent="338" name="icon">
       <Comment>组图标</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="780" parent="338" name="catelog_id">
+    <column id="781" parent="338" name="catelog_id">
       <Comment>所属分类id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>6</Position>
     </column>
-    <index id="781" parent="338" name="PRIMARY">
+    <index id="782" parent="338" name="PRIMARY">
       <ColNames>attr_group_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="782" parent="338" name="PRIMARY">
+    <key id="783" parent="338" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="783" parent="339" name="brand_id">
-      <AutoIncrement>1</AutoIncrement>
+    <column id="784" parent="339" name="brand_id">
+      <AutoIncrement>7</AutoIncrement>
       <Comment>品牌id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="784" parent="339" name="name">
+    <column id="785" parent="339" name="name">
       <Comment>品牌名</Comment>
       <DataType>char(50)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="785" parent="339" name="logo">
+    <column id="786" parent="339" name="logo">
       <Comment>品牌logo地址</Comment>
       <DataType>varchar(2000)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="786" parent="339" name="descript">
+    <column id="787" parent="339" name="descript">
       <Comment>介绍</Comment>
       <DataType>longtext|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="787" parent="339" name="show_status">
+    <column id="788" parent="339" name="show_status">
       <Comment>显示状态[0-不显示；1-显示]</Comment>
       <DataType>tinyint|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="788" parent="339" name="first_letter">
+    <column id="789" parent="339" name="first_letter">
       <Comment>检索首字母</Comment>
       <DataType>char(1)|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="789" parent="339" name="sort">
+    <column id="790" parent="339" name="sort">
       <Comment>排序</Comment>
       <DataType>int|0s</DataType>
       <Position>7</Position>
     </column>
-    <index id="790" parent="339" name="PRIMARY">
+    <index id="791" parent="339" name="PRIMARY">
       <ColNames>brand_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="791" parent="339" name="PRIMARY">
+    <key id="792" parent="339" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="792" parent="340" name="cat_id">
+    <column id="793" parent="340" name="cat_id">
       <AutoIncrement>1433</AutoIncrement>
       <Comment>分类id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="793" parent="340" name="name">
+    <column id="794" parent="340" name="name">
       <Comment>分类名称</Comment>
       <DataType>char(50)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="794" parent="340" name="parent_cid">
+    <column id="795" parent="340" name="parent_cid">
       <Comment>父分类id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="795" parent="340" name="cat_level">
+    <column id="796" parent="340" name="cat_level">
       <Comment>层级</Comment>
       <DataType>int|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="796" parent="340" name="show_status">
+    <column id="797" parent="340" name="show_status">
       <Comment>是否显示[0-不显示，1显示]</Comment>
       <DataType>tinyint|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="797" parent="340" name="sort">
+    <column id="798" parent="340" name="sort">
       <Comment>排序</Comment>
       <DataType>int|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="798" parent="340" name="icon">
+    <column id="799" parent="340" name="icon">
       <Comment>图标地址</Comment>
       <DataType>char(255)|0s</DataType>
       <Position>7</Position>
     </column>
-    <column id="799" parent="340" name="product_unit">
+    <column id="800" parent="340" name="product_unit">
       <Comment>计量单位</Comment>
       <DataType>char(50)|0s</DataType>
       <Position>8</Position>
     </column>
-    <column id="800" parent="340" name="product_count">
+    <column id="801" parent="340" name="product_count">
       <Comment>商品数量</Comment>
       <DataType>int|0s</DataType>
       <Position>9</Position>
     </column>
-    <index id="801" parent="340" name="PRIMARY">
+    <index id="802" parent="340" name="PRIMARY">
       <ColNames>cat_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="802" parent="340" name="PRIMARY">
+    <key id="803" parent="340" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="803" parent="341" name="id">
-      <AutoIncrement>1</AutoIncrement>
+    <column id="804" parent="341" name="id">
+      <AutoIncrement>3</AutoIncrement>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="804" parent="341" name="brand_id">
+    <column id="805" parent="341" name="brand_id">
       <Comment>品牌id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="805" parent="341" name="catelog_id">
+    <column id="806" parent="341" name="catelog_id">
       <Comment>分类id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="806" parent="341" name="brand_name">
+    <column id="807" parent="341" name="brand_name">
       <DataType>varchar(255)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="807" parent="341" name="catelog_name">
+    <column id="808" parent="341" name="catelog_name">
       <DataType>varchar(255)|0s</DataType>
       <Position>5</Position>
     </column>
-    <index id="808" parent="341" name="PRIMARY">
+    <index id="809" parent="341" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="809" parent="341" name="PRIMARY">
+    <key id="810" parent="341" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="810" parent="342" name="id">
+    <column id="811" parent="342" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="811" parent="342" name="comment_id">
+    <column id="812" parent="342" name="comment_id">
       <Comment>评论id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="812" parent="342" name="reply_id">
+    <column id="813" parent="342" name="reply_id">
       <Comment>回复id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>3</Position>
     </column>
-    <index id="813" parent="342" name="PRIMARY">
+    <index id="814" parent="342" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="814" parent="342" name="PRIMARY">
+    <key id="815" parent="342" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="815" parent="343" name="id">
+    <column id="816" parent="343" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="816" parent="343" name="spu_id">
+    <column id="817" parent="343" name="spu_id">
       <Comment>商品id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="817" parent="343" name="attr_id">
+    <column id="818" parent="343" name="attr_id">
       <Comment>属性id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="818" parent="343" name="attr_name">
+    <column id="819" parent="343" name="attr_name">
       <Comment>属性名</Comment>
       <DataType>varchar(200)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="819" parent="343" name="attr_value">
+    <column id="820" parent="343" name="attr_value">
       <Comment>属性值</Comment>
       <DataType>varchar(200)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="820" parent="343" name="attr_sort">
+    <column id="821" parent="343" name="attr_sort">
       <Comment>顺序</Comment>
       <DataType>int|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="821" parent="343" name="quick_show">
+    <column id="822" parent="343" name="quick_show">
       <Comment>快速展示【是否展示在介绍上；0-否 1-是】</Comment>
       <DataType>tinyint|0s</DataType>
       <Position>7</Position>
     </column>
-    <index id="822" parent="343" name="PRIMARY">
+    <index id="823" parent="343" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="823" parent="343" name="PRIMARY">
+    <key id="824" parent="343" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="824" parent="344" name="id">
+    <column id="825" parent="344" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="825" parent="344" name="sku_id">
+    <column id="826" parent="344" name="sku_id">
       <Comment>sku_id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="826" parent="344" name="img_url">
+    <column id="827" parent="344" name="img_url">
       <Comment>图片地址</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="827" parent="344" name="img_sort">
+    <column id="828" parent="344" name="img_sort">
       <Comment>排序</Comment>
       <DataType>int|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="828" parent="344" name="default_img">
+    <column id="829" parent="344" name="default_img">
       <Comment>默认图[0 - 不是默认图，1 - 是默认图]</Comment>
       <DataType>int|0s</DataType>
       <Position>5</Position>
     </column>
-    <index id="829" parent="344" name="PRIMARY">
+    <index id="830" parent="344" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="830" parent="344" name="PRIMARY">
+    <key id="831" parent="344" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="831" parent="345" name="sku_id">
+    <column id="832" parent="345" name="sku_id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>skuId</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="832" parent="345" name="spu_id">
+    <column id="833" parent="345" name="spu_id">
       <Comment>spuId</Comment>
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="833" parent="345" name="sku_name">
+    <column id="834" parent="345" name="sku_name">
       <Comment>sku名称</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="834" parent="345" name="sku_desc">
+    <column id="835" parent="345" name="sku_desc">
       <Comment>sku介绍描述</Comment>
       <DataType>varchar(2000)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="835" parent="345" name="catalog_id">
+    <column id="836" parent="345" name="catalog_id">
       <Comment>所属分类id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="836" parent="345" name="brand_id">
+    <column id="837" parent="345" name="brand_id">
       <Comment>品牌id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="837" parent="345" name="sku_default_img">
+    <column id="838" parent="345" name="sku_default_img">
       <Comment>默认图片</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>7</Position>
     </column>
-    <column id="838" parent="345" name="sku_title">
+    <column id="839" parent="345" name="sku_title">
       <Comment>标题</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>8</Position>
     </column>
-    <column id="839" parent="345" name="sku_subtitle">
+    <column id="840" parent="345" name="sku_subtitle">
       <Comment>副标题</Comment>
       <DataType>varchar(2000)|0s</DataType>
       <Position>9</Position>
     </column>
-    <column id="840" parent="345" name="price">
+    <column id="841" parent="345" name="price">
       <Comment>价格</Comment>
       <DataType>decimal(18,4 digit)|0s</DataType>
       <Position>10</Position>
     </column>
-    <column id="841" parent="345" name="sale_count">
+    <column id="842" parent="345" name="sale_count">
       <Comment>销量</Comment>
       <DataType>bigint|0s</DataType>
       <Position>11</Position>
     </column>
-    <index id="842" parent="345" name="PRIMARY">
+    <index id="843" parent="345" name="PRIMARY">
       <ColNames>sku_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="843" parent="345" name="PRIMARY">
+    <key id="844" parent="345" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="844" parent="346" name="id">
+    <column id="845" parent="346" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="845" parent="346" name="sku_id">
+    <column id="846" parent="346" name="sku_id">
       <Comment>sku_id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="846" parent="346" name="attr_id">
+    <column id="847" parent="346" name="attr_id">
       <Comment>attr_id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="847" parent="346" name="attr_name">
+    <column id="848" parent="346" name="attr_name">
       <Comment>销售属性名</Comment>
       <DataType>varchar(200)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="848" parent="346" name="attr_value">
+    <column id="849" parent="346" name="attr_value">
       <Comment>销售属性值</Comment>
       <DataType>varchar(200)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="849" parent="346" name="attr_sort">
+    <column id="850" parent="346" name="attr_sort">
       <Comment>顺序</Comment>
       <DataType>int|0s</DataType>
       <Position>6</Position>
     </column>
-    <index id="850" parent="346" name="PRIMARY">
+    <index id="851" parent="346" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="851" parent="346" name="PRIMARY">
+    <key id="852" parent="346" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="852" parent="347" name="id">
+    <column id="853" parent="347" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="853" parent="347" name="sku_id">
+    <column id="854" parent="347" name="sku_id">
       <Comment>sku_id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="854" parent="347" name="spu_id">
+    <column id="855" parent="347" name="spu_id">
       <Comment>spu_id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="855" parent="347" name="spu_name">
+    <column id="856" parent="347" name="spu_name">
       <Comment>商品名字</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="856" parent="347" name="member_nick_name">
+    <column id="857" parent="347" name="member_nick_name">
       <Comment>会员昵称</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="857" parent="347" name="star">
+    <column id="858" parent="347" name="star">
       <Comment>星级</Comment>
       <DataType>tinyint(1)|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="858" parent="347" name="member_ip">
+    <column id="859" parent="347" name="member_ip">
       <Comment>会员ip</Comment>
       <DataType>varchar(64)|0s</DataType>
       <Position>7</Position>
     </column>
-    <column id="859" parent="347" name="create_time">
+    <column id="860" parent="347" name="create_time">
       <Comment>创建时间</Comment>
       <DataType>datetime|0s</DataType>
       <Position>8</Position>
     </column>
-    <column id="860" parent="347" name="show_status">
+    <column id="861" parent="347" name="show_status">
       <Comment>显示状态[0-不显示，1-显示]</Comment>
       <DataType>tinyint(1)|0s</DataType>
       <Position>9</Position>
     </column>
-    <column id="861" parent="347" name="spu_attributes">
+    <column id="862" parent="347" name="spu_attributes">
       <Comment>购买时属性组合</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>10</Position>
     </column>
-    <column id="862" parent="347" name="likes_count">
+    <column id="863" parent="347" name="likes_count">
       <Comment>点赞数</Comment>
       <DataType>int|0s</DataType>
       <Position>11</Position>
     </column>
-    <column id="863" parent="347" name="reply_count">
+    <column id="864" parent="347" name="reply_count">
       <Comment>回复数</Comment>
       <DataType>int|0s</DataType>
       <Position>12</Position>
     </column>
-    <column id="864" parent="347" name="resources">
+    <column id="865" parent="347" name="resources">
       <Comment>评论图片/视频[json数据；[{type:文件类型,url:资源路径}]]</Comment>
       <DataType>varchar(1000)|0s</DataType>
       <Position>13</Position>
     </column>
-    <column id="865" parent="347" name="content">
+    <column id="866" parent="347" name="content">
       <Comment>内容</Comment>
       <DataType>text|0s</DataType>
       <Position>14</Position>
     </column>
-    <column id="866" parent="347" name="member_icon">
+    <column id="867" parent="347" name="member_icon">
       <Comment>用户头像</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>15</Position>
     </column>
-    <column id="867" parent="347" name="comment_type">
+    <column id="868" parent="347" name="comment_type">
       <Comment>评论类型[0 - 对商品的直接评论，1 - 对评论的回复]</Comment>
       <DataType>tinyint|0s</DataType>
       <Position>16</Position>
     </column>
-    <index id="868" parent="347" name="PRIMARY">
+    <index id="869" parent="347" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="869" parent="347" name="PRIMARY">
+    <key id="870" parent="347" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="870" parent="348" name="id">
+    <column id="871" parent="348" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="871" parent="348" name="spu_id">
+    <column id="872" parent="348" name="spu_id">
       <Comment>spu_id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="872" parent="348" name="img_name">
+    <column id="873" parent="348" name="img_name">
       <Comment>图片名</Comment>
       <DataType>varchar(200)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="873" parent="348" name="img_url">
+    <column id="874" parent="348" name="img_url">
       <Comment>图片地址</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="874" parent="348" name="img_sort">
+    <column id="875" parent="348" name="img_sort">
       <Comment>顺序</Comment>
       <DataType>int|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="875" parent="348" name="default_img">
+    <column id="876" parent="348" name="default_img">
       <Comment>是否默认图</Comment>
       <DataType>tinyint|0s</DataType>
       <Position>6</Position>
     </column>
-    <index id="876" parent="348" name="PRIMARY">
+    <index id="877" parent="348" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="877" parent="348" name="PRIMARY">
+    <key id="878" parent="348" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="878" parent="349" name="id">
+    <column id="879" parent="349" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>商品id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="879" parent="349" name="spu_name">
+    <column id="880" parent="349" name="spu_name">
       <Comment>商品名称</Comment>
       <DataType>varchar(200)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="880" parent="349" name="spu_description">
+    <column id="881" parent="349" name="spu_description">
       <Comment>商品描述</Comment>
       <DataType>varchar(1000)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="881" parent="349" name="catalog_id">
+    <column id="882" parent="349" name="catalog_id">
       <Comment>所属分类id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="882" parent="349" name="brand_id">
+    <column id="883" parent="349" name="brand_id">
       <Comment>品牌id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="883" parent="349" name="weight">
+    <column id="884" parent="349" name="weight">
       <DataType>decimal(18,4 digit)|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="884" parent="349" name="publish_status">
+    <column id="885" parent="349" name="publish_status">
       <Comment>上架状态[0 - 下架，1 - 上架]</Comment>
       <DataType>tinyint|0s</DataType>
       <Position>7</Position>
     </column>
-    <column id="885" parent="349" name="create_time">
+    <column id="886" parent="349" name="create_time">
       <DataType>datetime|0s</DataType>
       <Position>8</Position>
     </column>
-    <column id="886" parent="349" name="update_time">
+    <column id="887" parent="349" name="update_time">
       <DataType>datetime|0s</DataType>
       <Position>9</Position>
     </column>
-    <index id="887" parent="349" name="PRIMARY">
+    <index id="888" parent="349" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="888" parent="349" name="PRIMARY">
+    <key id="889" parent="349" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="889" parent="350" name="spu_id">
+    <column id="890" parent="350" name="spu_id">
       <Comment>商品id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="890" parent="350" name="decript">
+    <column id="891" parent="350" name="decript">
       <Comment>商品介绍</Comment>
       <DataType>longtext|0s</DataType>
       <Position>2</Position>
     </column>
-    <index id="891" parent="350" name="PRIMARY">
+    <index id="892" parent="350" name="PRIMARY">
       <ColNames>spu_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="892" parent="350" name="PRIMARY">
+    <key id="893" parent="350" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="893" parent="351" name="id">
+    <column id="894" parent="351" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="894" parent="351" name="coupon_type">
+    <column id="895" parent="351" name="coupon_type">
       <Comment>优惠卷类型[0-&gt;全场赠券；1-&gt;会员赠券；2-&gt;购物赠券；3-&gt;注册赠券]</Comment>
       <DataType>tinyint(1)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="895" parent="351" name="coupon_img">
+    <column id="896" parent="351" name="coupon_img">
       <Comment>优惠券图片</Comment>
       <DataType>varchar(2000)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="896" parent="351" name="coupon_name">
+    <column id="897" parent="351" name="coupon_name">
       <Comment>优惠卷名字</Comment>
       <DataType>varchar(100)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="897" parent="351" name="num">
+    <column id="898" parent="351" name="num">
       <Comment>数量</Comment>
       <DataType>int|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="898" parent="351" name="amount">
+    <column id="899" parent="351" name="amount">
       <Comment>金额</Comment>
       <DataType>decimal(18,4 digit)|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="899" parent="351" name="per_limit">
+    <column id="900" parent="351" name="per_limit">
       <Comment>每人限领张数</Comment>
       <DataType>int|0s</DataType>
       <Position>7</Position>
     </column>
-    <column id="900" parent="351" name="min_point">
+    <column id="901" parent="351" name="min_point">
       <Comment>使用门槛</Comment>
       <DataType>decimal(18,4 digit)|0s</DataType>
       <Position>8</Position>
     </column>
-    <column id="901" parent="351" name="start_time">
+    <column id="902" parent="351" name="start_time">
       <Comment>开始时间</Comment>
       <DataType>datetime|0s</DataType>
       <Position>9</Position>
     </column>
-    <column id="902" parent="351" name="end_time">
+    <column id="903" parent="351" name="end_time">
       <Comment>结束时间</Comment>
       <DataType>datetime|0s</DataType>
       <Position>10</Position>
     </column>
-    <column id="903" parent="351" name="use_type">
+    <column id="904" parent="351" name="use_type">
       <Comment>使用类型[0-&gt;全场通用；1-&gt;指定分类；2-&gt;指定商品]</Comment>
       <DataType>tinyint(1)|0s</DataType>
       <Position>11</Position>
     </column>
-    <column id="904" parent="351" name="note">
+    <column id="905" parent="351" name="note">
       <Comment>备注</Comment>
       <DataType>varchar(200)|0s</DataType>
       <Position>12</Position>
     </column>
-    <column id="905" parent="351" name="publish_count">
+    <column id="906" parent="351" name="publish_count">
       <Comment>发行数量</Comment>
       <DataType>int|0s</DataType>
       <Position>13</Position>
     </column>
-    <column id="906" parent="351" name="use_count">
+    <column id="907" parent="351" name="use_count">
       <Comment>已使用数量</Comment>
       <DataType>int|0s</DataType>
       <Position>14</Position>
     </column>
-    <column id="907" parent="351" name="receive_count">
+    <column id="908" parent="351" name="receive_count">
       <Comment>领取数量</Comment>
       <DataType>int|0s</DataType>
       <Position>15</Position>
     </column>
-    <column id="908" parent="351" name="enable_start_time">
+    <column id="909" parent="351" name="enable_start_time">
       <Comment>可以领取的开始日期</Comment>
       <DataType>datetime|0s</DataType>
       <Position>16</Position>
     </column>
-    <column id="909" parent="351" name="enable_end_time">
+    <column id="910" parent="351" name="enable_end_time">
       <Comment>可以领取的结束日期</Comment>
       <DataType>datetime|0s</DataType>
       <Position>17</Position>
     </column>
-    <column id="910" parent="351" name="code">
+    <column id="911" parent="351" name="code">
       <Comment>优惠码</Comment>
       <DataType>varchar(64)|0s</DataType>
       <Position>18</Position>
     </column>
-    <column id="911" parent="351" name="member_level">
+    <column id="912" parent="351" name="member_level">
       <Comment>可以领取的会员等级[0-&gt;不限等级，其他-对应等级]</Comment>
       <DataType>tinyint(1)|0s</DataType>
       <Position>19</Position>
     </column>
-    <column id="912" parent="351" name="publish">
+    <column id="913" parent="351" name="publish">
       <Comment>发布状态[0-未发布，1-已发布]</Comment>
       <DataType>tinyint(1)|0s</DataType>
       <Position>20</Position>
     </column>
-    <index id="913" parent="351" name="PRIMARY">
+    <index id="914" parent="351" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="914" parent="351" name="PRIMARY">
+    <key id="915" parent="351" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="915" parent="352" name="id">
+    <column id="916" parent="352" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="916" parent="352" name="coupon_id">
+    <column id="917" parent="352" name="coupon_id">
       <Comment>优惠券id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="917" parent="352" name="member_id">
+    <column id="918" parent="352" name="member_id">
       <Comment>会员id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="918" parent="352" name="member_nick_name">
+    <column id="919" parent="352" name="member_nick_name">
       <Comment>会员名字</Comment>
       <DataType>varchar(64)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="919" parent="352" name="get_type">
+    <column id="920" parent="352" name="get_type">
       <Comment>获取方式[0-&gt;后台赠送；1-&gt;主动领取]</Comment>
       <DataType>tinyint(1)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="920" parent="352" name="create_time">
+    <column id="921" parent="352" name="create_time">
       <Comment>创建时间</Comment>
       <DataType>datetime|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="921" parent="352" name="use_type">
+    <column id="922" parent="352" name="use_type">
       <Comment>使用状态[0-&gt;未使用；1-&gt;已使用；2-&gt;已过期]</Comment>
       <DataType>tinyint(1)|0s</DataType>
       <Position>7</Position>
     </column>
-    <column id="922" parent="352" name="use_time">
+    <column id="923" parent="352" name="use_time">
       <Comment>使用时间</Comment>
       <DataType>datetime|0s</DataType>
       <Position>8</Position>
     </column>
-    <column id="923" parent="352" name="order_id">
+    <column id="924" parent="352" name="order_id">
       <Comment>订单id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>9</Position>
     </column>
-    <column id="924" parent="352" name="order_sn">
+    <column id="925" parent="352" name="order_sn">
       <Comment>订单号</Comment>
       <DataType>bigint|0s</DataType>
       <Position>10</Position>
     </column>
-    <index id="925" parent="352" name="PRIMARY">
+    <index id="926" parent="352" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="926" parent="352" name="PRIMARY">
+    <key id="927" parent="352" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="927" parent="353" name="id">
+    <column id="928" parent="353" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="928" parent="353" name="coupon_id">
+    <column id="929" parent="353" name="coupon_id">
       <Comment>优惠券id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="929" parent="353" name="category_id">
+    <column id="930" parent="353" name="category_id">
       <Comment>产品分类id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="930" parent="353" name="category_name">
+    <column id="931" parent="353" name="category_name">
       <Comment>产品分类名称</Comment>
       <DataType>varchar(64)|0s</DataType>
       <Position>4</Position>
     </column>
-    <index id="931" parent="353" name="PRIMARY">
+    <index id="932" parent="353" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="932" parent="353" name="PRIMARY">
+    <key id="933" parent="353" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="933" parent="354" name="id">
+    <column id="934" parent="354" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="934" parent="354" name="coupon_id">
+    <column id="935" parent="354" name="coupon_id">
       <Comment>优惠券id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="935" parent="354" name="spu_id">
+    <column id="936" parent="354" name="spu_id">
       <Comment>spu_id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="936" parent="354" name="spu_name">
+    <column id="937" parent="354" name="spu_name">
       <Comment>spu_name</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>4</Position>
     </column>
-    <index id="937" parent="354" name="PRIMARY">
+    <index id="938" parent="354" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="938" parent="354" name="PRIMARY">
+    <key id="939" parent="354" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="939" parent="355" name="id">
+    <column id="940" parent="355" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="940" parent="355" name="name">
+    <column id="941" parent="355" name="name">
       <Comment>名字</Comment>
       <DataType>varchar(100)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="941" parent="355" name="pic">
+    <column id="942" parent="355" name="pic">
       <Comment>图片地址</Comment>
       <DataType>varchar(500)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="942" parent="355" name="start_time">
+    <column id="943" parent="355" name="start_time">
       <Comment>开始时间</Comment>
       <DataType>datetime|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="943" parent="355" name="end_time">
+    <column id="944" parent="355" name="end_time">
       <Comment>结束时间</Comment>
       <DataType>datetime|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="944" parent="355" name="status">
+    <column id="945" parent="355" name="status">
       <Comment>状态</Comment>
       <DataType>tinyint(1)|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="945" parent="355" name="click_count">
+    <column id="946" parent="355" name="click_count">
       <Comment>点击数</Comment>
       <DataType>int|0s</DataType>
       <Position>7</Position>
     </column>
-    <column id="946" parent="355" name="url">
+    <column id="947" parent="355" name="url">
       <Comment>广告详情连接地址</Comment>
       <DataType>varchar(500)|0s</DataType>
       <Position>8</Position>
     </column>
-    <column id="947" parent="355" name="note">
+    <column id="948" parent="355" name="note">
       <Comment>备注</Comment>
       <DataType>varchar(500)|0s</DataType>
       <Position>9</Position>
     </column>
-    <column id="948" parent="355" name="sort">
+    <column id="949" parent="355" name="sort">
       <Comment>排序</Comment>
       <DataType>int|0s</DataType>
       <Position>10</Position>
     </column>
-    <column id="949" parent="355" name="publisher_id">
+    <column id="950" parent="355" name="publisher_id">
       <Comment>发布者</Comment>
       <DataType>bigint|0s</DataType>
       <Position>11</Position>
     </column>
-    <column id="950" parent="355" name="auth_id">
+    <column id="951" parent="355" name="auth_id">
       <Comment>审核者</Comment>
       <DataType>bigint|0s</DataType>
       <Position>12</Position>
     </column>
-    <index id="951" parent="355" name="PRIMARY">
+    <index id="952" parent="355" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="952" parent="355" name="PRIMARY">
+    <key id="953" parent="355" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="953" parent="356" name="id">
+    <column id="954" parent="356" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="954" parent="356" name="name">
+    <column id="955" parent="356" name="name">
       <Comment>专题名字</Comment>
       <DataType>varchar(200)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="955" parent="356" name="title">
+    <column id="956" parent="356" name="title">
       <Comment>专题标题</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="956" parent="356" name="sub_title">
+    <column id="957" parent="356" name="sub_title">
       <Comment>专题副标题</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="957" parent="356" name="status">
+    <column id="958" parent="356" name="status">
       <Comment>显示状态</Comment>
       <DataType>tinyint(1)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="958" parent="356" name="url">
+    <column id="959" parent="356" name="url">
       <Comment>详情连接</Comment>
       <DataType>varchar(500)|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="959" parent="356" name="sort">
+    <column id="960" parent="356" name="sort">
       <Comment>排序</Comment>
       <DataType>int|0s</DataType>
       <Position>7</Position>
     </column>
-    <column id="960" parent="356" name="img">
+    <column id="961" parent="356" name="img">
       <Comment>专题图片地址</Comment>
       <DataType>varchar(500)|0s</DataType>
       <Position>8</Position>
     </column>
-    <index id="961" parent="356" name="PRIMARY">
+    <index id="962" parent="356" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="962" parent="356" name="PRIMARY">
+    <key id="963" parent="356" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="963" parent="357" name="id">
+    <column id="964" parent="357" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="964" parent="357" name="name">
+    <column id="965" parent="357" name="name">
       <Comment>专题名字</Comment>
       <DataType>varchar(200)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="965" parent="357" name="subject_id">
+    <column id="966" parent="357" name="subject_id">
       <Comment>专题id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="966" parent="357" name="spu_id">
+    <column id="967" parent="357" name="spu_id">
       <Comment>spu_id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="967" parent="357" name="sort">
+    <column id="968" parent="357" name="sort">
       <Comment>排序</Comment>
       <DataType>int|0s</DataType>
       <Position>5</Position>
     </column>
-    <index id="968" parent="357" name="PRIMARY">
+    <index id="969" parent="357" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="969" parent="357" name="PRIMARY">
+    <key id="970" parent="357" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="970" parent="358" name="id">
+    <column id="971" parent="358" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="971" parent="358" name="sku_id">
+    <column id="972" parent="358" name="sku_id">
       <Comment>sku_id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="972" parent="358" name="member_level_id">
+    <column id="973" parent="358" name="member_level_id">
       <Comment>会员等级id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="973" parent="358" name="member_level_name">
+    <column id="974" parent="358" name="member_level_name">
       <Comment>会员等级名</Comment>
       <DataType>varchar(100)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="974" parent="358" name="member_price">
+    <column id="975" parent="358" name="member_price">
       <Comment>会员对应价格</Comment>
       <DataType>decimal(18,4 digit)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="975" parent="358" name="add_other">
+    <column id="976" parent="358" name="add_other">
       <Comment>可否叠加其他优惠[0-不可叠加优惠，1-可叠加]</Comment>
       <DataType>tinyint(1)|0s</DataType>
       <Position>6</Position>
     </column>
-    <index id="976" parent="358" name="PRIMARY">
+    <index id="977" parent="358" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="977" parent="358" name="PRIMARY">
+    <key id="978" parent="358" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="978" parent="359" name="id">
+    <column id="979" parent="359" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="979" parent="359" name="title">
+    <column id="980" parent="359" name="title">
       <Comment>活动标题</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="980" parent="359" name="start_time">
+    <column id="981" parent="359" name="start_time">
       <Comment>开始日期</Comment>
       <DataType>datetime|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="981" parent="359" name="end_time">
+    <column id="982" parent="359" name="end_time">
       <Comment>结束日期</Comment>
       <DataType>datetime|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="982" parent="359" name="status">
+    <column id="983" parent="359" name="status">
       <Comment>上下线状态</Comment>
       <DataType>tinyint|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="983" parent="359" name="create_time">
+    <column id="984" parent="359" name="create_time">
       <Comment>创建时间</Comment>
       <DataType>datetime|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="984" parent="359" name="user_id">
+    <column id="985" parent="359" name="user_id">
       <Comment>创建人</Comment>
       <DataType>bigint|0s</DataType>
       <Position>7</Position>
     </column>
-    <index id="985" parent="359" name="PRIMARY">
+    <index id="986" parent="359" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="986" parent="359" name="PRIMARY">
+    <key id="987" parent="359" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="987" parent="360" name="id">
+    <column id="988" parent="360" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="988" parent="360" name="name">
+    <column id="989" parent="360" name="name">
       <Comment>场次名称</Comment>
       <DataType>varchar(200)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="989" parent="360" name="start_time">
+    <column id="990" parent="360" name="start_time">
       <Comment>每日开始时间</Comment>
       <DataType>datetime|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="990" parent="360" name="end_time">
+    <column id="991" parent="360" name="end_time">
       <Comment>每日结束时间</Comment>
       <DataType>datetime|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="991" parent="360" name="status">
+    <column id="992" parent="360" name="status">
       <Comment>启用状态</Comment>
       <DataType>tinyint(1)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="992" parent="360" name="create_time">
+    <column id="993" parent="360" name="create_time">
       <Comment>创建时间</Comment>
       <DataType>datetime|0s</DataType>
       <Position>6</Position>
     </column>
-    <index id="993" parent="360" name="PRIMARY">
+    <index id="994" parent="360" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="994" parent="360" name="PRIMARY">
+    <key id="995" parent="360" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="995" parent="361" name="id">
+    <column id="996" parent="361" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="996" parent="361" name="member_id">
+    <column id="997" parent="361" name="member_id">
       <Comment>member_id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="997" parent="361" name="sku_id">
+    <column id="998" parent="361" name="sku_id">
       <Comment>sku_id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="998" parent="361" name="session_id">
+    <column id="999" parent="361" name="session_id">
       <Comment>活动场次id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="999" parent="361" name="subcribe_time">
+    <column id="1000" parent="361" name="subcribe_time">
       <Comment>订阅时间</Comment>
       <DataType>datetime|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="1000" parent="361" name="send_time">
+    <column id="1001" parent="361" name="send_time">
       <Comment>发送时间</Comment>
       <DataType>datetime|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="1001" parent="361" name="notice_type">
+    <column id="1002" parent="361" name="notice_type">
       <Comment>通知方式[0-短信，1-邮件]</Comment>
       <DataType>tinyint(1)|0s</DataType>
       <Position>7</Position>
     </column>
-    <index id="1002" parent="361" name="PRIMARY">
+    <index id="1003" parent="361" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="1003" parent="361" name="PRIMARY">
+    <key id="1004" parent="361" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1004" parent="362" name="id">
+    <column id="1005" parent="362" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1005" parent="362" name="promotion_id">
+    <column id="1006" parent="362" name="promotion_id">
       <Comment>活动id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="1006" parent="362" name="promotion_session_id">
+    <column id="1007" parent="362" name="promotion_session_id">
       <Comment>活动场次id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="1007" parent="362" name="sku_id">
+    <column id="1008" parent="362" name="sku_id">
       <Comment>商品id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="1008" parent="362" name="seckill_price">
+    <column id="1009" parent="362" name="seckill_price">
       <Comment>秒杀价格</Comment>
       <DataType>decimal(10)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="1009" parent="362" name="seckill_count">
+    <column id="1010" parent="362" name="seckill_count">
       <Comment>秒杀总量</Comment>
       <DataType>decimal(10)|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="1010" parent="362" name="seckill_limit">
+    <column id="1011" parent="362" name="seckill_limit">
       <Comment>每人限购数量</Comment>
       <DataType>decimal(10)|0s</DataType>
       <Position>7</Position>
     </column>
-    <column id="1011" parent="362" name="seckill_sort">
+    <column id="1012" parent="362" name="seckill_sort">
       <Comment>排序</Comment>
       <DataType>int|0s</DataType>
       <Position>8</Position>
     </column>
-    <index id="1012" parent="362" name="PRIMARY">
+    <index id="1013" parent="362" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="1013" parent="362" name="PRIMARY">
+    <key id="1014" parent="362" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1014" parent="363" name="id">
+    <column id="1015" parent="363" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1015" parent="363" name="sku_id">
+    <column id="1016" parent="363" name="sku_id">
       <Comment>spu_id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="1016" parent="363" name="full_price">
+    <column id="1017" parent="363" name="full_price">
       <Comment>满多少</Comment>
       <DataType>decimal(18,4 digit)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="1017" parent="363" name="reduce_price">
+    <column id="1018" parent="363" name="reduce_price">
       <Comment>减多少</Comment>
       <DataType>decimal(18,4 digit)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="1018" parent="363" name="add_other">
+    <column id="1019" parent="363" name="add_other">
       <Comment>是否参与其他优惠</Comment>
       <DataType>tinyint(1)|0s</DataType>
       <Position>5</Position>
     </column>
-    <index id="1019" parent="363" name="PRIMARY">
+    <index id="1020" parent="363" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="1020" parent="363" name="PRIMARY">
+    <key id="1021" parent="363" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1021" parent="364" name="id">
+    <column id="1022" parent="364" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1022" parent="364" name="sku_id">
+    <column id="1023" parent="364" name="sku_id">
       <Comment>spu_id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="1023" parent="364" name="full_count">
+    <column id="1024" parent="364" name="full_count">
       <Comment>满几件</Comment>
       <DataType>int|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="1024" parent="364" name="discount">
+    <column id="1025" parent="364" name="discount">
       <Comment>打几折</Comment>
       <DataType>decimal(4,2 digit)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="1025" parent="364" name="price">
+    <column id="1026" parent="364" name="price">
       <Comment>折后价</Comment>
       <DataType>decimal(18,4 digit)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="1026" parent="364" name="add_other">
+    <column id="1027" parent="364" name="add_other">
       <Comment>是否叠加其他优惠[0-不可叠加，1-可叠加]</Comment>
       <DataType>tinyint(1)|0s</DataType>
       <Position>6</Position>
     </column>
-    <index id="1027" parent="364" name="PRIMARY">
+    <index id="1028" parent="364" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="1028" parent="364" name="PRIMARY">
+    <key id="1029" parent="364" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1029" parent="365" name="id">
+    <column id="1030" parent="365" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1030" parent="365" name="spu_id">
+    <column id="1031" parent="365" name="spu_id">
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="1031" parent="365" name="grow_bounds">
+    <column id="1032" parent="365" name="grow_bounds">
       <Comment>成长积分</Comment>
       <DataType>decimal(18,4 digit)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="1032" parent="365" name="buy_bounds">
+    <column id="1033" parent="365" name="buy_bounds">
       <Comment>购物积分</Comment>
       <DataType>decimal(18,4 digit)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="1033" parent="365" name="work">
+    <column id="1034" parent="365" name="work">
       <Comment>优惠生效情况[1111（四个状态位，从右到左）;0 - 无优惠，成长积分是否赠送;1 - 无优惠，购物积分是否赠送;2 - 有优惠，成长积分是否赠送;3 - 有优惠，购物积分是否赠送【状态位0：不赠送，1：赠送】]</Comment>
       <DataType>tinyint(1)|0s</DataType>
       <Position>5</Position>
     </column>
-    <index id="1034" parent="365" name="PRIMARY">
+    <index id="1035" parent="365" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="1035" parent="365" name="PRIMARY">
+    <key id="1036" parent="365" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1036" parent="366" name="id">
+    <column id="1037" parent="366" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1037" parent="366" name="member_id">
+    <column id="1038" parent="366" name="member_id">
       <Comment>member_id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="1038" parent="366" name="create_time">
+    <column id="1039" parent="366" name="create_time">
       <Comment>create_time</Comment>
       <DataType>datetime|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="1039" parent="366" name="change_count">
+    <column id="1040" parent="366" name="change_count">
       <Comment>改变的值（正负计数）</Comment>
       <DataType>int|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="1040" parent="366" name="note">
+    <column id="1041" parent="366" name="note">
       <Comment>备注</Comment>
       <DataType>varchar(0)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="1041" parent="366" name="source_type">
+    <column id="1042" parent="366" name="source_type">
       <Comment>积分来源[0-购物，1-管理员修改]</Comment>
       <DataType>tinyint|0s</DataType>
       <Position>6</Position>
     </column>
-    <index id="1042" parent="366" name="PRIMARY">
+    <index id="1043" parent="366" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="1043" parent="366" name="PRIMARY">
+    <key id="1044" parent="366" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1044" parent="367" name="id">
+    <column id="1045" parent="367" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1045" parent="367" name="member_id">
+    <column id="1046" parent="367" name="member_id">
       <Comment>member_id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="1046" parent="367" name="create_time">
+    <column id="1047" parent="367" name="create_time">
       <Comment>create_time</Comment>
       <DataType>datetime|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="1047" parent="367" name="change_count">
+    <column id="1048" parent="367" name="change_count">
       <Comment>变化的值</Comment>
       <DataType>int|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="1048" parent="367" name="note">
+    <column id="1049" parent="367" name="note">
       <Comment>备注</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="1049" parent="367" name="source_tyoe">
+    <column id="1050" parent="367" name="source_tyoe">
       <Comment>来源[0-&gt;购物；1-&gt;管理员修改;2-&gt;活动]</Comment>
       <DataType>tinyint|0s</DataType>
       <Position>6</Position>
     </column>
-    <index id="1050" parent="367" name="PRIMARY">
+    <index id="1051" parent="367" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="1051" parent="367" name="PRIMARY">
+    <key id="1052" parent="367" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1052" parent="368" name="id">
+    <column id="1053" parent="368" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1053" parent="368" name="level_id">
+    <column id="1054" parent="368" name="level_id">
       <Comment>会员等级id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="1054" parent="368" name="username">
+    <column id="1055" parent="368" name="username">
       <Comment>用户名</Comment>
       <DataType>char(64)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="1055" parent="368" name="password">
+    <column id="1056" parent="368" name="password">
       <Comment>密码</Comment>
       <DataType>varchar(64)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="1056" parent="368" name="nickname">
+    <column id="1057" parent="368" name="nickname">
       <Comment>昵称</Comment>
       <DataType>varchar(64)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="1057" parent="368" name="mobile">
+    <column id="1058" parent="368" name="mobile">
       <Comment>手机号码</Comment>
       <DataType>varchar(20)|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="1058" parent="368" name="email">
+    <column id="1059" parent="368" name="email">
       <Comment>邮箱</Comment>
       <DataType>varchar(64)|0s</DataType>
       <Position>7</Position>
     </column>
-    <column id="1059" parent="368" name="header">
+    <column id="1060" parent="368" name="header">
       <Comment>头像</Comment>
       <DataType>varchar(500)|0s</DataType>
       <Position>8</Position>
     </column>
-    <column id="1060" parent="368" name="gender">
+    <column id="1061" parent="368" name="gender">
       <Comment>性别</Comment>
       <DataType>tinyint|0s</DataType>
       <Position>9</Position>
     </column>
-    <column id="1061" parent="368" name="birth">
+    <column id="1062" parent="368" name="birth">
       <Comment>生日</Comment>
       <DataType>date|0s</DataType>
       <Position>10</Position>
     </column>
-    <column id="1062" parent="368" name="city">
+    <column id="1063" parent="368" name="city">
       <Comment>所在城市</Comment>
       <DataType>varchar(500)|0s</DataType>
       <Position>11</Position>
     </column>
-    <column id="1063" parent="368" name="job">
+    <column id="1064" parent="368" name="job">
       <Comment>职业</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>12</Position>
     </column>
-    <column id="1064" parent="368" name="sign">
+    <column id="1065" parent="368" name="sign">
       <Comment>个性签名</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>13</Position>
     </column>
-    <column id="1065" parent="368" name="source_type">
+    <column id="1066" parent="368" name="source_type">
       <Comment>用户来源</Comment>
       <DataType>tinyint|0s</DataType>
       <Position>14</Position>
     </column>
-    <column id="1066" parent="368" name="integration">
+    <column id="1067" parent="368" name="integration">
       <Comment>积分</Comment>
       <DataType>int|0s</DataType>
       <Position>15</Position>
     </column>
-    <column id="1067" parent="368" name="growth">
+    <column id="1068" parent="368" name="growth">
       <Comment>成长值</Comment>
       <DataType>int|0s</DataType>
       <Position>16</Position>
     </column>
-    <column id="1068" parent="368" name="status">
+    <column id="1069" parent="368" name="status">
       <Comment>启用状态</Comment>
       <DataType>tinyint|0s</DataType>
       <Position>17</Position>
     </column>
-    <column id="1069" parent="368" name="create_time">
+    <column id="1070" parent="368" name="create_time">
       <Comment>注册时间</Comment>
       <DataType>datetime|0s</DataType>
       <Position>18</Position>
     </column>
-    <index id="1070" parent="368" name="PRIMARY">
+    <index id="1071" parent="368" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="1071" parent="368" name="PRIMARY">
+    <key id="1072" parent="368" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1072" parent="369" name="id">
+    <column id="1073" parent="369" name="id">
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1073" parent="369" name="member_id">
+    <column id="1074" parent="369" name="member_id">
       <Comment>会员id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="1074" parent="369" name="spu_id">
+    <column id="1075" parent="369" name="spu_id">
       <Comment>spu_id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="1075" parent="369" name="spu_name">
+    <column id="1076" parent="369" name="spu_name">
       <Comment>spu_name</Comment>
       <DataType>varchar(500)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="1076" parent="369" name="spu_img">
+    <column id="1077" parent="369" name="spu_img">
       <Comment>spu_img</Comment>
       <DataType>varchar(500)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="1077" parent="369" name="create_time">
+    <column id="1078" parent="369" name="create_time">
       <Comment>create_time</Comment>
       <DataType>datetime|0s</DataType>
       <Position>6</Position>
     </column>
-    <index id="1078" parent="369" name="PRIMARY">
+    <index id="1079" parent="369" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="1079" parent="369" name="PRIMARY">
+    <key id="1080" parent="369" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1080" parent="370" name="id">
+    <column id="1081" parent="370" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1081" parent="370" name="subject_id">
+    <column id="1082" parent="370" name="subject_id">
       <Comment>subject_id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="1082" parent="370" name="subject_name">
+    <column id="1083" parent="370" name="subject_name">
       <Comment>subject_name</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="1083" parent="370" name="subject_img">
+    <column id="1084" parent="370" name="subject_img">
       <Comment>subject_img</Comment>
       <DataType>varchar(500)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="1084" parent="370" name="subject_urll">
+    <column id="1085" parent="370" name="subject_urll">
       <Comment>活动url</Comment>
       <DataType>varchar(500)|0s</DataType>
       <Position>5</Position>
     </column>
-    <index id="1085" parent="370" name="PRIMARY">
+    <index id="1086" parent="370" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="1086" parent="370" name="PRIMARY">
+    <key id="1087" parent="370" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1087" parent="371" name="id">
-      <AutoIncrement>1</AutoIncrement>
+    <column id="1088" parent="371" name="id">
+      <AutoIncrement>3</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1088" parent="371" name="name">
+    <column id="1089" parent="371" name="name">
       <Comment>等级名称</Comment>
       <DataType>varchar(100)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="1089" parent="371" name="growth_point">
+    <column id="1090" parent="371" name="growth_point">
       <Comment>等级需要的成长值</Comment>
       <DataType>int|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="1090" parent="371" name="default_status">
+    <column id="1091" parent="371" name="default_status">
       <Comment>是否为默认等级[0-&gt;不是；1-&gt;是]</Comment>
       <DataType>tinyint|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="1091" parent="371" name="free_freight_point">
+    <column id="1092" parent="371" name="free_freight_point">
       <Comment>免运费标准</Comment>
       <DataType>decimal(18,4 digit)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="1092" parent="371" name="comment_growth_point">
+    <column id="1093" parent="371" name="comment_growth_point">
       <Comment>每次评价获取的成长值</Comment>
       <DataType>int|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="1093" parent="371" name="priviledge_free_freight">
+    <column id="1094" parent="371" name="priviledge_free_freight">
       <Comment>是否有免邮特权</Comment>
       <DataType>tinyint|0s</DataType>
       <Position>7</Position>
     </column>
-    <column id="1094" parent="371" name="priviledge_member_price">
+    <column id="1095" parent="371" name="priviledge_member_price">
       <Comment>是否有会员价格特权</Comment>
       <DataType>tinyint|0s</DataType>
       <Position>8</Position>
     </column>
-    <column id="1095" parent="371" name="priviledge_birthday">
+    <column id="1096" parent="371" name="priviledge_birthday">
       <Comment>是否有生日特权</Comment>
       <DataType>tinyint|0s</DataType>
       <Position>9</Position>
     </column>
-    <column id="1096" parent="371" name="note">
+    <column id="1097" parent="371" name="note">
       <Comment>备注</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>10</Position>
     </column>
-    <index id="1097" parent="371" name="PRIMARY">
+    <index id="1098" parent="371" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="1098" parent="371" name="PRIMARY">
+    <key id="1099" parent="371" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1099" parent="372" name="id">
+    <column id="1100" parent="372" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1100" parent="372" name="member_id">
+    <column id="1101" parent="372" name="member_id">
       <Comment>member_id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="1101" parent="372" name="create_time">
+    <column id="1102" parent="372" name="create_time">
       <Comment>创建时间</Comment>
       <DataType>datetime|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="1102" parent="372" name="ip">
+    <column id="1103" parent="372" name="ip">
       <Comment>ip</Comment>
       <DataType>varchar(64)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="1103" parent="372" name="city">
+    <column id="1104" parent="372" name="city">
       <Comment>city</Comment>
       <DataType>varchar(64)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="1104" parent="372" name="login_type">
+    <column id="1105" parent="372" name="login_type">
       <Comment>登录类型[1-web，2-app]</Comment>
       <DataType>tinyint(1)|0s</DataType>
       <Position>6</Position>
     </column>
-    <index id="1105" parent="372" name="PRIMARY">
+    <index id="1106" parent="372" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="1106" parent="372" name="PRIMARY">
+    <key id="1107" parent="372" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1107" parent="373" name="id">
+    <column id="1108" parent="373" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1108" parent="373" name="member_id">
+    <column id="1109" parent="373" name="member_id">
       <Comment>member_id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="1109" parent="373" name="name">
+    <column id="1110" parent="373" name="name">
       <Comment>收货人姓名</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="1110" parent="373" name="phone">
+    <column id="1111" parent="373" name="phone">
       <Comment>电话</Comment>
       <DataType>varchar(64)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="1111" parent="373" name="post_code">
+    <column id="1112" parent="373" name="post_code">
       <Comment>邮政编码</Comment>
       <DataType>varchar(64)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="1112" parent="373" name="province">
+    <column id="1113" parent="373" name="province">
       <Comment>省份/直辖市</Comment>
       <DataType>varchar(100)|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="1113" parent="373" name="city">
+    <column id="1114" parent="373" name="city">
       <Comment>城市</Comment>
       <DataType>varchar(100)|0s</DataType>
       <Position>7</Position>
     </column>
-    <column id="1114" parent="373" name="region">
+    <column id="1115" parent="373" name="region">
       <Comment>区</Comment>
       <DataType>varchar(100)|0s</DataType>
       <Position>8</Position>
     </column>
-    <column id="1115" parent="373" name="detail_address">
+    <column id="1116" parent="373" name="detail_address">
       <Comment>详细地址(街道)</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>9</Position>
     </column>
-    <column id="1116" parent="373" name="areacode">
+    <column id="1117" parent="373" name="areacode">
       <Comment>省市区代码</Comment>
       <DataType>varchar(15)|0s</DataType>
       <Position>10</Position>
     </column>
-    <column id="1117" parent="373" name="default_status">
+    <column id="1118" parent="373" name="default_status">
       <Comment>是否默认</Comment>
       <DataType>tinyint(1)|0s</DataType>
       <Position>11</Position>
     </column>
-    <index id="1118" parent="373" name="PRIMARY">
+    <index id="1119" parent="373" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="1119" parent="373" name="PRIMARY">
+    <key id="1120" parent="373" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1120" parent="374" name="id">
+    <column id="1121" parent="374" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1121" parent="374" name="member_id">
+    <column id="1122" parent="374" name="member_id">
       <Comment>会员id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="1122" parent="374" name="consume_amount">
+    <column id="1123" parent="374" name="consume_amount">
       <Comment>累计消费金额</Comment>
       <DataType>decimal(18,4 digit)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="1123" parent="374" name="coupon_amount">
+    <column id="1124" parent="374" name="coupon_amount">
       <Comment>累计优惠金额</Comment>
       <DataType>decimal(18,4 digit)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="1124" parent="374" name="order_count">
+    <column id="1125" parent="374" name="order_count">
       <Comment>订单数量</Comment>
       <DataType>int|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="1125" parent="374" name="coupon_count">
+    <column id="1126" parent="374" name="coupon_count">
       <Comment>优惠券数量</Comment>
       <DataType>int|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="1126" parent="374" name="comment_count">
+    <column id="1127" parent="374" name="comment_count">
       <Comment>评价数</Comment>
       <DataType>int|0s</DataType>
       <Position>7</Position>
     </column>
-    <column id="1127" parent="374" name="return_order_count">
+    <column id="1128" parent="374" name="return_order_count">
       <Comment>退货数量</Comment>
       <DataType>int|0s</DataType>
       <Position>8</Position>
     </column>
-    <column id="1128" parent="374" name="login_count">
+    <column id="1129" parent="374" name="login_count">
       <Comment>登录次数</Comment>
       <DataType>int|0s</DataType>
       <Position>9</Position>
     </column>
-    <column id="1129" parent="374" name="attend_count">
+    <column id="1130" parent="374" name="attend_count">
       <Comment>关注数量</Comment>
       <DataType>int|0s</DataType>
       <Position>10</Position>
     </column>
-    <column id="1130" parent="374" name="fans_count">
+    <column id="1131" parent="374" name="fans_count">
       <Comment>粉丝数量</Comment>
       <DataType>int|0s</DataType>
       <Position>11</Position>
     </column>
-    <column id="1131" parent="374" name="collect_product_count">
+    <column id="1132" parent="374" name="collect_product_count">
       <Comment>收藏的商品数量</Comment>
       <DataType>int|0s</DataType>
       <Position>12</Position>
     </column>
-    <column id="1132" parent="374" name="collect_subject_count">
+    <column id="1133" parent="374" name="collect_subject_count">
       <Comment>收藏的专题活动数量</Comment>
       <DataType>int|0s</DataType>
       <Position>13</Position>
     </column>
-    <column id="1133" parent="374" name="collect_comment_count">
+    <column id="1134" parent="374" name="collect_comment_count">
       <Comment>收藏的评论数量</Comment>
       <DataType>int|0s</DataType>
       <Position>14</Position>
     </column>
-    <column id="1134" parent="374" name="invite_friend_count">
+    <column id="1135" parent="374" name="invite_friend_count">
       <Comment>邀请的朋友数量</Comment>
       <DataType>int|0s</DataType>
       <Position>15</Position>
     </column>
-    <index id="1135" parent="374" name="PRIMARY">
+    <index id="1136" parent="374" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="1136" parent="374" name="PRIMARY">
+    <key id="1137" parent="374" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1137" parent="375" name="id">
+    <column id="1138" parent="375" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1138" parent="375" name="branch_id">
+    <column id="1139" parent="375" name="branch_id">
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="1139" parent="375" name="xid">
+    <column id="1140" parent="375" name="xid">
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="1140" parent="375" name="context">
+    <column id="1141" parent="375" name="context">
       <DataType>varchar(128)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="1141" parent="375" name="rollback_info">
+    <column id="1142" parent="375" name="rollback_info">
       <DataType>longblob|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="1142" parent="375" name="log_status">
+    <column id="1143" parent="375" name="log_status">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="1143" parent="375" name="log_created">
+    <column id="1144" parent="375" name="log_created">
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="1144" parent="375" name="log_modified">
+    <column id="1145" parent="375" name="log_modified">
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
-    <column id="1145" parent="375" name="ext">
+    <column id="1146" parent="375" name="ext">
       <DataType>varchar(100)|0s</DataType>
       <Position>9</Position>
     </column>
-    <index id="1146" parent="375" name="PRIMARY">
+    <index id="1147" parent="375" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="1147" parent="375" name="ux_undo_log">
+    <index id="1148" parent="375" name="ux_undo_log">
       <ColNames>xid
 branch_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="1148" parent="375" name="PRIMARY">
+    <key id="1149" parent="375" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="1149" parent="375" name="ux_undo_log">
+    <key id="1150" parent="375" name="ux_undo_log">
       <UnderlyingIndexName>ux_undo_log</UnderlyingIndexName>
     </key>
-    <column id="1150" parent="376" name="id">
+    <column id="1151" parent="376" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1151" parent="376" name="assignee_id">
+    <column id="1152" parent="376" name="assignee_id">
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="1152" parent="376" name="assignee_name">
+    <column id="1153" parent="376" name="assignee_name">
       <DataType>varchar(255)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="1153" parent="376" name="phone">
+    <column id="1154" parent="376" name="phone">
       <DataType>char(13)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="1154" parent="376" name="priority">
+    <column id="1155" parent="376" name="priority">
       <DataType>int|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="1155" parent="376" name="status">
+    <column id="1156" parent="376" name="status">
       <DataType>int|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="1156" parent="376" name="ware_id">
+    <column id="1157" parent="376" name="ware_id">
       <DataType>bigint|0s</DataType>
       <Position>7</Position>
     </column>
-    <column id="1157" parent="376" name="amount">
+    <column id="1158" parent="376" name="amount">
       <DataType>decimal(18,4 digit)|0s</DataType>
       <Position>8</Position>
     </column>
-    <column id="1158" parent="376" name="create_time">
+    <column id="1159" parent="376" name="create_time">
       <DataType>datetime|0s</DataType>
       <Position>9</Position>
     </column>
-    <column id="1159" parent="376" name="update_time">
+    <column id="1160" parent="376" name="update_time">
       <DataType>datetime|0s</DataType>
       <Position>10</Position>
     </column>
-    <index id="1160" parent="376" name="PRIMARY">
+    <index id="1161" parent="376" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="1161" parent="376" name="PRIMARY">
+    <key id="1162" parent="376" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1162" parent="377" name="id">
+    <column id="1163" parent="377" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1163" parent="377" name="purchase_id">
+    <column id="1164" parent="377" name="purchase_id">
       <Comment>采购单id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="1164" parent="377" name="sku_id">
+    <column id="1165" parent="377" name="sku_id">
       <Comment>采购商品id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="1165" parent="377" name="sku_num">
+    <column id="1166" parent="377" name="sku_num">
       <Comment>采购数量</Comment>
       <DataType>int|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="1166" parent="377" name="sku_price">
+    <column id="1167" parent="377" name="sku_price">
       <Comment>采购金额</Comment>
       <DataType>decimal(18,4 digit)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="1167" parent="377" name="ware_id">
+    <column id="1168" parent="377" name="ware_id">
       <Comment>仓库id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="1168" parent="377" name="status">
+    <column id="1169" parent="377" name="status">
       <Comment>状态[0新建，1已分配，2正在采购，3已完成，4采购失败]</Comment>
       <DataType>int|0s</DataType>
       <Position>7</Position>
     </column>
-    <index id="1169" parent="377" name="PRIMARY">
+    <index id="1170" parent="377" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="1170" parent="377" name="PRIMARY">
+    <key id="1171" parent="377" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1171" parent="378" name="id">
+    <column id="1172" parent="378" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1172" parent="378" name="name">
+    <column id="1173" parent="378" name="name">
       <Comment>仓库名</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="1173" parent="378" name="address">
+    <column id="1174" parent="378" name="address">
       <Comment>仓库地址</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="1174" parent="378" name="areacode">
+    <column id="1175" parent="378" name="areacode">
       <Comment>区域编码</Comment>
       <DataType>varchar(20)|0s</DataType>
       <Position>4</Position>
     </column>
-    <index id="1175" parent="378" name="PRIMARY">
+    <index id="1176" parent="378" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="1176" parent="378" name="PRIMARY">
+    <key id="1177" parent="378" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1177" parent="379" name="id">
+    <column id="1178" parent="379" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1178" parent="379" name="order_id">
+    <column id="1179" parent="379" name="order_id">
       <Comment>order_id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="1179" parent="379" name="order_sn">
+    <column id="1180" parent="379" name="order_sn">
       <Comment>order_sn</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="1180" parent="379" name="consignee">
+    <column id="1181" parent="379" name="consignee">
       <Comment>收货人</Comment>
       <DataType>varchar(100)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="1181" parent="379" name="consignee_tel">
+    <column id="1182" parent="379" name="consignee_tel">
       <Comment>收货人电话</Comment>
       <DataType>char(15)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="1182" parent="379" name="delivery_address">
+    <column id="1183" parent="379" name="delivery_address">
       <Comment>配送地址</Comment>
       <DataType>varchar(500)|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="1183" parent="379" name="order_comment">
+    <column id="1184" parent="379" name="order_comment">
       <Comment>订单备注</Comment>
       <DataType>varchar(200)|0s</DataType>
       <Position>7</Position>
     </column>
-    <column id="1184" parent="379" name="payment_way">
+    <column id="1185" parent="379" name="payment_way">
       <Comment>付款方式【 1:在线付款 2:货到付款】</Comment>
       <DataType>tinyint(1)|0s</DataType>
       <Position>8</Position>
     </column>
-    <column id="1185" parent="379" name="task_status">
+    <column id="1186" parent="379" name="task_status">
       <Comment>任务状态</Comment>
       <DataType>tinyint|0s</DataType>
       <Position>9</Position>
     </column>
-    <column id="1186" parent="379" name="order_body">
+    <column id="1187" parent="379" name="order_body">
       <Comment>订单描述</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>10</Position>
     </column>
-    <column id="1187" parent="379" name="tracking_no">
+    <column id="1188" parent="379" name="tracking_no">
       <Comment>物流单号</Comment>
       <DataType>char(30)|0s</DataType>
       <Position>11</Position>
     </column>
-    <column id="1188" parent="379" name="create_time">
+    <column id="1189" parent="379" name="create_time">
       <Comment>create_time</Comment>
       <DataType>datetime|0s</DataType>
       <Position>12</Position>
     </column>
-    <column id="1189" parent="379" name="ware_id">
+    <column id="1190" parent="379" name="ware_id">
       <Comment>仓库id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>13</Position>
     </column>
-    <column id="1190" parent="379" name="task_comment">
+    <column id="1191" parent="379" name="task_comment">
       <Comment>工作单备注</Comment>
       <DataType>varchar(500)|0s</DataType>
       <Position>14</Position>
     </column>
-    <index id="1191" parent="379" name="PRIMARY">
+    <index id="1192" parent="379" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="1192" parent="379" name="PRIMARY">
+    <key id="1193" parent="379" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1193" parent="380" name="id">
+    <column id="1194" parent="380" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1194" parent="380" name="sku_id">
+    <column id="1195" parent="380" name="sku_id">
       <Comment>sku_id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="1195" parent="380" name="sku_name">
+    <column id="1196" parent="380" name="sku_name">
       <Comment>sku_name</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="1196" parent="380" name="sku_num">
+    <column id="1197" parent="380" name="sku_num">
       <Comment>购买个数</Comment>
       <DataType>int|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="1197" parent="380" name="task_id">
+    <column id="1198" parent="380" name="task_id">
       <Comment>工作单id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="1198" parent="380" name="ware_id">
+    <column id="1199" parent="380" name="ware_id">
       <Comment>仓库id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="1199" parent="380" name="lock_status">
+    <column id="1200" parent="380" name="lock_status">
       <Comment>1-已锁定  2-已解锁  3-扣减</Comment>
       <DataType>int|0s</DataType>
       <Position>7</Position>
     </column>
-    <index id="1200" parent="380" name="PRIMARY">
+    <index id="1201" parent="380" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="1201" parent="380" name="PRIMARY">
+    <key id="1202" parent="380" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1202" parent="381" name="id">
+    <column id="1203" parent="381" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1203" parent="381" name="sku_id">
+    <column id="1204" parent="381" name="sku_id">
       <Comment>sku_id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="1204" parent="381" name="ware_id">
+    <column id="1205" parent="381" name="ware_id">
       <Comment>仓库id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="1205" parent="381" name="stock">
+    <column id="1206" parent="381" name="stock">
       <Comment>库存数</Comment>
       <DataType>int|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="1206" parent="381" name="sku_name">
+    <column id="1207" parent="381" name="sku_name">
       <Comment>sku_name</Comment>
       <DataType>varchar(200)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="1207" parent="381" name="stock_locked">
+    <column id="1208" parent="381" name="stock_locked">
       <Comment>锁定库存</Comment>
       <DataType>int|0s</DataType>
       <DefaultExpression>0</DefaultExpression>
       <Position>6</Position>
     </column>
-    <index id="1208" parent="381" name="PRIMARY">
+    <index id="1209" parent="381" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="1209" parent="381" name="sku_id">
+    <index id="1210" parent="381" name="sku_id">
       <ColNames>sku_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="1210" parent="381" name="ware_id">
+    <index id="1211" parent="381" name="ware_id">
       <ColNames>ware_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="1211" parent="381" name="PRIMARY">
+    <key id="1212" parent="381" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1212" parent="382" name="cat_id">
+    <column id="1213" parent="382" name="cat_id">
       <AutoIncrement>1433</AutoIncrement>
       <Comment>分类id</Comment>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1213" parent="382" name="name">
+    <column id="1214" parent="382" name="name">
       <Comment>分类名称</Comment>
       <DataType>char(50)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="1214" parent="382" name="parent_cid">
+    <column id="1215" parent="382" name="parent_cid">
       <Comment>父分类id</Comment>
       <DataType>bigint|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="1215" parent="382" name="cat_level">
+    <column id="1216" parent="382" name="cat_level">
       <Comment>层级</Comment>
       <DataType>int|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="1216" parent="382" name="show_status">
+    <column id="1217" parent="382" name="show_status">
       <Comment>是否显示[0-不显示，1显示]</Comment>
       <DataType>tinyint|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="1217" parent="382" name="sort">
+    <column id="1218" parent="382" name="sort">
       <Comment>排序</Comment>
       <DataType>int|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="1218" parent="382" name="icon">
+    <column id="1219" parent="382" name="icon">
       <Comment>图标地址</Comment>
       <DataType>char(255)|0s</DataType>
       <Position>7</Position>
     </column>
-    <column id="1219" parent="382" name="product_unit">
+    <column id="1220" parent="382" name="product_unit">
       <Comment>计量单位</Comment>
       <DataType>char(50)|0s</DataType>
       <Position>8</Position>
     </column>
-    <column id="1220" parent="382" name="product_count">
+    <column id="1221" parent="382" name="product_count">
       <Comment>商品数量</Comment>
       <DataType>int|0s</DataType>
       <Position>9</Position>
     </column>
-    <index id="1221" parent="382" name="PRIMARY">
+    <index id="1222" parent="382" name="PRIMARY">
       <ColNames>cat_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="1222" parent="382" name="PRIMARY">
+    <key id="1223" parent="382" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

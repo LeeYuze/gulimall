@@ -1,5 +1,7 @@
 package com.atguigu.gulimall.coupon.service.impl;
 
+import com.atguigu.common.to.SkuReductionTo;
+import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -24,6 +26,15 @@ public class SkuLadderServiceImpl extends ServiceImpl<SkuLadderDao, SkuLadderEnt
         );
 
         return new PageUtils(page);
+    }
+
+    @Override
+    public void save(SkuReductionTo skuReductionTo) {
+        SkuLadderEntity skuLadderEntity = new SkuLadderEntity();
+        BeanUtils.copyProperties(skuReductionTo, skuLadderEntity);
+        skuLadderEntity.setAddOther(skuReductionTo.getCountStatus());
+
+        this.save(skuLadderEntity);
     }
 
 }

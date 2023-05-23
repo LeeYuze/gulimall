@@ -4,8 +4,11 @@ import com.atguigu.gulimall.product.dao.AttrAttrgroupRelationDao;
 import com.atguigu.gulimall.product.dao.AttrDao;
 import com.atguigu.gulimall.product.entity.AttrAttrgroupRelationEntity;
 import com.atguigu.gulimall.product.entity.AttrEntity;
+import com.atguigu.gulimall.product.service.AttrService;
 import com.atguigu.gulimall.product.vo.AttrGroupRelationVo;
+import com.atguigu.gulimall.product.vo.AttrGroupWithAttrsVo;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -33,6 +36,8 @@ public class AttrGroupServiceImpl extends ServiceImpl<AttrGroupDao, AttrGroupEnt
     private final AttrAttrgroupRelationDao attrAttrgroupRelationDao;
 
     private final AttrDao attrDao;
+
+    private final AttrService attrService;
 
     @Override
     public PageUtils queryPage(Map<String, Object> params) {
@@ -67,6 +72,22 @@ public class AttrGroupServiceImpl extends ServiceImpl<AttrGroupDao, AttrGroupEnt
     @Override
     public void deleteRelation(AttrGroupRelationVo[] relationVo) {
         attrAttrgroupRelationDao.deleteBatch(relationVo);
+    }
+
+    @Override
+    public List<AttrGroupWithAttrsVo> listWithAttrByCatelogId(Long catelogId) {
+
+        List<AttrGroupEntity> attrGroupEntityList = this.list(new QueryWrapper<AttrGroupEntity>().eq("catelog_id", catelogId));
+
+        return attrGroupEntityList.stream().map(attrGroup -> {
+            AttrGroupWithAttrsVo attrGroupWithAttrsVo = new AttrGroupWithAttrsVo();
+            BeanUtils.copyProperties(attrGroup, attrGroupWithAttrsVo);
+
+            List<AttrEntity> attrEntityList = attrService.getAttrRelation(attrGroup.getAttrGroupId());
+            attrGroupWithAttrsVo.setAttrs(attrEntityList);
+
+            return attrGroupWithAttrsVo;
+        }).collect(Collectors.toList());
     }
 
 }

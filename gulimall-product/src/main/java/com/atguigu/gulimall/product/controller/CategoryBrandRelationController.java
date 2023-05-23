@@ -28,6 +28,14 @@ public class CategoryBrandRelationController {
     @Autowired
     private CategoryBrandRelationService categoryBrandRelationService;
 
+
+    @GetMapping("/brands/list")
+    public R brandsList(@RequestParam Long catId) {
+        List<CategoryBrandRelationEntity> list = categoryBrandRelationService.list(new QueryWrapper<CategoryBrandRelationEntity>().eq("catelog_id", catId));
+
+        return R.ok().put("data", list);
+    }
+
     /**
      * 列表
      */
