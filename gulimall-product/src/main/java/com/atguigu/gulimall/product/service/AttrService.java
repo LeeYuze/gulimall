@@ -54,5 +54,7 @@ public interface AttrService extends IService<AttrEntity> {
      * @return 属性
      */
     PageUtils getAttrNoRelation(Map<String, Object> params, Long attrGroupId);
+
+    List<AttrEntity> listOfSearchAttrBySpuId(Long spuId);
 }
 

@@ -1,12 +1,17 @@
 package com.atguigu.gulimall.ware.service.impl;
 
+import com.atguigu.common.to.es.SkuHasStockTo;
 import com.atguigu.common.utils.R;
 import com.atguigu.gulimall.ware.feign.ProductFeignService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -65,6 +70,28 @@ public class WareSkuServiceImpl extends ServiceImpl<WareSkuDao, WareSkuEntity> i
         } else {
             this.baseMapper.addStock(skuId, wareId, skuNum);
         }
+    }
+
+    @Override
+    public List<SkuHasStockTo> hasStock(List<Long> skuIds) {
+
+        QueryWrapper<WareSkuEntity> wrapper = new QueryWrapper<WareSkuEntity>().in("sku_id", skuIds);
+        List<WareSkuEntity> wareSkuEntityList = list(wrapper);
+
+        return skuIds.stream().map(skuId->{
+            SkuHasStockTo skuHasStockTo = new SkuHasStockTo();
+            skuHasStockTo.setSkuId(skuId);
+
+            Optional<WareSkuEntity> optionalWareSku = wareSkuEntityList.stream().filter(ware -> ware.getSkuId().equals(skuId)).findFirst();
+            if (optionalWareSku.isPresent()) {
+                WareSkuEntity wareSkuEntity = optionalWareSku.get();
+                skuHasStockTo.setHasStock((wareSkuEntity.getStock() - wareSkuEntity.getStockLocked()) > 0);
+            } else {
+                skuHasStockTo.setHasStock(false);
+            }
+
+            return skuHasStockTo;
+        }).collect(Collectors.toList());
     }
 
 }

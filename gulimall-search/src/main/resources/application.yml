@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: gulimall-search
+  cloud:
+    nacos:
+      config:
+        server-addr: 10.211.55.8:8848
+        namespace: 92817bc7-0f37-4fd3-b956-f958b8bf4a73
+  config:
+    import:
+      - optional:nacos:elasticsearch.yml?group=DEVELOP_GROUP
+      - nacos:other.yml?group=DEVELOP_GROUP

@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestBody;
  * @date 2023/5/23
  */
 @FeignClient("gulimall-coupon")
-
 public interface CouponFeignService {
     @PostMapping("/coupon/spubounds/save")
     R saveSpuBounds(@RequestBody SpuBoundsTo spuBoundsTo);

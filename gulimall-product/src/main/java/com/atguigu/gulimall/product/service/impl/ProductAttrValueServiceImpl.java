@@ -1,5 +1,6 @@
 package com.atguigu.gulimall.product.service.impl;
 
+import com.atguigu.gulimall.product.dao.AttrDao;
 import com.atguigu.gulimall.product.entity.AttrEntity;
 import com.atguigu.gulimall.product.service.AttrService;
 import com.atguigu.gulimall.product.vo.BaseAttrs;
@@ -25,7 +26,7 @@ import com.atguigu.gulimall.product.service.ProductAttrValueService;
 @RequiredArgsConstructor
 public class ProductAttrValueServiceImpl extends ServiceImpl<ProductAttrValueDao, ProductAttrValueEntity> implements ProductAttrValueService {
 
-    private final AttrService attrService;
+    private final AttrDao attrDao;
 
     @Override
     public PageUtils queryPage(Map<String, Object> params) {
@@ -46,7 +47,7 @@ public class ProductAttrValueServiceImpl extends ServiceImpl<ProductAttrValueDao
             productAttrValueEntity.setAttrValue(attr.getAttrValues());
             productAttrValueEntity.setQuickShow(attr.getShowDesc());
 
-            AttrEntity attrEntity = attrService.getById(attr.getAttrId());
+            AttrEntity attrEntity = attrDao.selectById(attr.getAttrId());
             productAttrValueEntity.setAttrName(attrEntity.getAttrName());
 
             return productAttrValueEntity;
