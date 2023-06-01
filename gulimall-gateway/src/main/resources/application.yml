@@ -11,7 +11,7 @@ spring:
         - id: product_route
           uri: lb://gulimall-product
           predicates:
-            - Path=/api/product/**
+            - Path=/api/product/**,/hello
           filters:
             - RewritePath=/api/(?<segment>/?.*), /$\{segment}
         - id: ware_route
@@ -39,7 +39,12 @@ spring:
           filters:
             - RewritePath=/api/(?<segment>/?.*), /renren-fast/$\{segment}
 
-
+        #nginx负载均衡
+        #product服务转发
+        - id: gulimall_host_route
+          uri: lb://gulimall-product
+          predicates:
+            - Host=gulimall.xyz,item.gulimall.xyz
   config:
     import:
       - nacos:gulimall-gateway.yml?group=DEFAULT_GROUP

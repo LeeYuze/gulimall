@@ -10,4 +10,5 @@ spring:
     import:
       - optional:nacos:datasource.yml?group=DEVELOP_GROUP
       - optional:nacos:mybatis-plus.yml?group=DEVELOP_GROUP
+      - optional:nacos:redis.yml?group=DEVELOP_GROUP
       - nacos:other.yml?group=DEVELOP_GROUP
