@@ -1,5 +1,6 @@
 package com.atguigu.gulimall.product.service;
 
+import com.atguigu.gulimall.product.entity.AttrEntity;
 import com.atguigu.gulimall.product.vo.BaseAttrs;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.atguigu.common.utils.PageUtils;
@@ -24,5 +25,7 @@ public interface ProductAttrValueService extends IService<ProductAttrValueEntity
     List<ProductAttrValueEntity> listBySpuId(Long spuId);
 
     void updateBatchBySpuAttr(Long spuId, List<ProductAttrValueEntity> productAttrValueEntityList);
+
+    List<ProductAttrValueEntity> listOfSearchAttrBySpuId(Long spuId);
 }
 

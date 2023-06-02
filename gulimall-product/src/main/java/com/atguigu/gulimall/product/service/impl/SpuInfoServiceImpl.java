@@ -194,7 +194,7 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
     }
 
     private void setAttrsToSkuEsModel(Long spuId, SkuEsModel skuEsModel) {
-        List<AttrEntity> attrEntityList = attrService.listOfSearchAttrBySpuId(spuId);
+        List<ProductAttrValueEntity> attrEntityList = productAttrValueService.listOfSearchAttrBySpuId(spuId);
         List<SkuEsModel.Attrs> attrs = attrEntityList.stream().map(attr -> {
             SkuEsModel.Attrs esAttr = new SkuEsModel.Attrs();
             BeanUtils.copyProperties(attr, esAttr);

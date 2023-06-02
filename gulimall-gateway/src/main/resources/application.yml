@@ -44,7 +44,12 @@ spring:
         - id: gulimall_host_route
           uri: lb://gulimall-product
           predicates:
-            - Host=gulimall.xyz,item.gulimall.xyz
+            - Host=mall.10686.top,item.mall.10686.top
+        #search
+        - id: search_host_route
+          uri: lb://gulimall-search
+          predicates:
+            - Host=search.mall.10686.top
   config:
     import:
       - nacos:gulimall-gateway.yml?group=DEFAULT_GROUP

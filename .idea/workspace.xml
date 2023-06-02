@@ -5,17 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ebad4c71-8a89-4e73-ae9a-92111f593641" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/gulimall-product/src/main/java/com/atguigu/gulimall/product/config/RedisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gulimall-product/src/main/java/com/atguigu/gulimall/product/config/RedissonConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gulimall-product/src/main/java/com/atguigu/gulimall/product/vo/Catelog2Vo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gulimall-product/src/main/java/com/atguigu/gulimall/product/web/IndexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gulimall-search/src/main/java/com/atguigu/gulimall/search/controller/SearchController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gulimall-search/src/main/java/com/atguigu/gulimall/search/feign/ProductFeignService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gulimall-search/src/main/java/com/atguigu/gulimall/search/service/MallSearchService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gulimall-search/src/main/java/com/atguigu/gulimall/search/service/impl/MallSearchServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gulimall-search/src/main/java/com/atguigu/gulimall/search/vo/AttrResponseVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gulimall-search/src/main/java/com/atguigu/gulimall/search/vo/BrandVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gulimall-search/src/main/java/com/atguigu/gulimall/search/vo/SearchParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gulimall-search/src/main/java/com/atguigu/gulimall/search/vo/SearchResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gulimall-search/src/main/resources/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulimall-common/src/main/java/com/atguigu/common/utils/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/gulimall-common/src/main/java/com/atguigu/common/utils/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gulimall-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gulimall-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulimall-product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gulimall-product/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulimall-product/src/main/java/com/atguigu/gulimall/product/GulimallProductApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gulimall-product/src/main/java/com/atguigu/gulimall/product/GulimallProductApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulimall-product/src/main/java/com/atguigu/gulimall/product/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gulimall-product/src/main/java/com/atguigu/gulimall/product/service/CategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulimall-product/src/main/java/com/atguigu/gulimall/product/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gulimall-product/src/main/java/com/atguigu/gulimall/product/service/impl/CategoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulimall-product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gulimall-product/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulimall-product/src/test/java/com/atguigu/gulimall/product/GulimallProductApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/gulimall-product/src/test/java/com/atguigu/gulimall/product/GulimallProductApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulimall-product/src/main/java/com/atguigu/gulimall/product/controller/BrandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gulimall-product/src/main/java/com/atguigu/gulimall/product/controller/BrandController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulimall-product/src/main/java/com/atguigu/gulimall/product/service/ProductAttrValueService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gulimall-product/src/main/java/com/atguigu/gulimall/product/service/ProductAttrValueService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulimall-product/src/main/java/com/atguigu/gulimall/product/service/impl/ProductAttrValueServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gulimall-product/src/main/java/com/atguigu/gulimall/product/service/impl/ProductAttrValueServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulimall-product/src/main/java/com/atguigu/gulimall/product/service/impl/SpuInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gulimall-product/src/main/java/com/atguigu/gulimall/product/service/impl/SpuInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulimall-product/src/main/resources/mapper/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/gulimall-product/src/main/resources/mapper/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulimall-product/src/main/resources/mapper/templates/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/gulimall-product/src/main/resources/mapper/templates/item.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulimall-product/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/gulimall-product/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulimall-product/src/main/resources/templates/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/gulimall-product/src/main/resources/templates/item.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulimall-search/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gulimall-search/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulimall-search/src/main/java/com/atguigu/gulimall/search/GulimallSearchApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gulimall-search/src/main/java/com/atguigu/gulimall/search/GulimallSearchApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +37,9 @@
       <list>
         <option value="Enum" />
         <option value="AnnotationType" />
-        <option value="Interface" />
+        <option value="HTML File" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -58,6 +69,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -113,7 +125,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.GulimallProductApplication">
+  <component name="RunManager" selected="Spring Boot.GulimallSearchApplication">
     <configuration name="gulimall" type="CompoundRunConfigurationType">
       <toRun name="GulimallCouponApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="GulimallGatewayApplication" type="SpringBootApplicationConfigurationType" />
@@ -291,7 +303,7 @@
       <workItem from="1684473957703" duration="221000" />
       <workItem from="1684474181528" duration="987000" />
       <workItem from="1684477733081" duration="71856000" />
-      <workItem from="1684916761378" duration="32310000" />
+      <workItem from="1684916761378" duration="58481000" />
     </task>
     <servers />
   </component>
